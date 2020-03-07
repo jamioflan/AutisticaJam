@@ -61,7 +61,7 @@ public class CameraPan : MonoBehaviour
         lastPosition = position;
     }
 
-    static Vector3 Vector3SetZ(Vector3 A, float Z) => new Vector3(A.x, A.y, Z);
+    static Vector3 Vector3SetZ(Vector3 A, float Z) => new Vector3(A.x, Z, A.y);
 
     static Vector3 Vector3Multiply(Vector3 A, Vector3 B) =>
         new Vector3(A.x * B.x, A.y * B.y, A.z * B.z);
