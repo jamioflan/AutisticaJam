@@ -52,6 +52,8 @@ public class PlayerTopDownMove : MonoBehaviour
 
 		cc.Move(input * MoveSpeed * Time.deltaTime);
 
+		sprites.infoPanelUI.SetActive(true);
+
 		if(Input.GetKeyDown(KeyCode.Space))
 		{
 			Debug.Log("Pressed space");
@@ -65,10 +67,12 @@ public class PlayerTopDownMove : MonoBehaviour
 				canInteractWith.sprites = sprites;
 				canInteractWith.sprites.transform.SetParent(canInteractWith.transform);
 				canInteractWith.sprites.transform.localPosition = Vector3.zero;
+				canInteractWith.sprites.infoPanelUI.SetActive(false);
 
 				sprites = newsprites;
 				sprites.transform.SetParent(transform);
 				sprites.transform.localPosition = Vector3.zero;
+				sprites.infoPanelUI.SetActive(true);
 			}
 		}
     }
