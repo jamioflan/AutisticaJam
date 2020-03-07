@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerTopDownMove : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class PlayerTopDownMove : MonoBehaviour
 
 	private CharacterController cc;
 
+	public GameObject pressSpaceObject;
+	public Text pressSpaceText;
 
 
 	public SpriteSet sprites;
@@ -20,7 +23,8 @@ public class PlayerTopDownMove : MonoBehaviour
     void Start()
     {
 		cc = GetComponent<CharacterController>();
-    }
+		pressSpaceObject.SetActive(false);
+	}
 
     // Update is called once per frame
     void Update()

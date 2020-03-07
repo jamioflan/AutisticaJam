@@ -22,19 +22,27 @@ public class TriggerVol : MonoBehaviour
 	private void OnTriggerEnter(Collider collision)
 	{
 		Debug.Log("Collision enter " + collision.name);
-		if (collision.GetComponent<PlayerTopDownMove>())
+		PlayerTopDownMove player = collision.GetComponent<PlayerTopDownMove>();
+		if (player)
 		{
-			collision.GetComponent<PlayerTopDownMove>().canInteractWith = character;
+			player.canInteractWith = character;
+			player.pressSpaceObject.SetActive(true);
+			player.pressSpaceText.text = "Press Space to Help " + character.name;
 		}
 	}
 
 	private void OnTriggerExit(Collider collision)
 	{
 		Debug.Log("Collision exit " + collision.name);
-		if (collision.GetComponent<PlayerTopDownMove>())
+		PlayerTopDownMove player = collision.GetComponent<PlayerTopDownMove>();
+		if (player)
 		{
-			if (collision.GetComponent<PlayerTopDownMove>().canInteractWith == character)
-				collision.GetComponent<PlayerTopDownMove>().canInteractWith = null;
+			if (player.canInteractWith == character)
+			{
+				player.canInteractWith = null;
+
+				player.pressSpaceObject.SetActive(false);
+			}
 		}
 	}
 }
