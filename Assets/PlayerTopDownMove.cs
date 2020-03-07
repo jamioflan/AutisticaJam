@@ -25,6 +25,11 @@ public class PlayerTopDownMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		if(sprites.gameComplete)
+		{
+			return;
+		}
+
 		Vector3 input = new Vector3( Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
 
 		ClearSprites();
@@ -84,6 +89,8 @@ public class PlayerTopDownMove : MonoBehaviour
 		sprites.left.enabled = false;
 		sprites.right.enabled = false;
 		sprites.blink.enabled = false;
+		if (sprites.hop != null)
+			sprites.hop.enabled = false;
 	}
 
 	public Character canInteractWith = null;

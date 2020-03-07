@@ -22,6 +22,8 @@ public class Character : MonoBehaviour
 		sprites.left.enabled = false;
 		sprites.right.enabled = false;
 		sprites.blink.enabled = false;
+		if(sprites.hop != null)
+			sprites.hop.enabled = false;
 
 		blinker += Time.deltaTime;
 		if (blinker % 3.0f < 0.2f)
