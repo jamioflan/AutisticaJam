@@ -29,6 +29,11 @@ public class TriggerVol : MonoBehaviour
 			player.pressSpaceObject.SetActive(true);
 			player.pressSpaceText.text = "Press Space to Help " + character.name;
 		}
+
+        if (collision.gameObject.tag == "Jason")
+        {
+            collision.gameObject.tag = "Gemma";
+        }
 	}
 
 	private void OnTriggerExit(Collider collision)
