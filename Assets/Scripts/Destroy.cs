@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Destroy_Rabbits : MonoBehaviour
+public class Destroy : MonoBehaviour
 {
     void DestroyObjectDelayed()
     {

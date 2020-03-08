@@ -292,6 +292,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 2
+  pressSpaceObject: {fileID: 0}
+  pressSpaceText: {fileID: 0}
   sprites: {fileID: 7236469263510035377}
   blinker: 0
   canInteractWith: {fileID: 0}
@@ -528,6 +530,9 @@ MonoBehaviour:
   left: {fileID: 7236469261968570122}
   right: {fileID: 7236469263256849115}
   blink: {fileID: 7236469262095120363}
+  hop: {fileID: 0}
+  infoPanelUI: {fileID: 0}
+  gameComplete: 0
 --- !u!1 &7236469263676606803
 GameObject:
   m_ObjectHideFlags: 0
