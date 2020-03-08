@@ -6,6 +6,7 @@ public class Rabbit_unlock : MonoBehaviour
 {
     public GameObject rabbitAnimated;
     public GameObject rabbitGone;
+    public GameObject rabbitBarrier;
 
     private void Start()
     {
@@ -18,6 +19,7 @@ public class Rabbit_unlock : MonoBehaviour
         {
             Destroy(rabbitGone);
             rabbitAnimated.SetActive(true);
+            rabbitBarrier.SetActive(false);
         }
     }
 

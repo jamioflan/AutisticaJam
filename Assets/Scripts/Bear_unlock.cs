@@ -7,11 +7,13 @@ public class Bear_unlock : MonoBehaviour
     public GameObject bearAnimated;
     public GameObject bearGone;
     public GameObject bearBarrier;
+    public GameObject fish;
 
     private void Start()
     {
         bearAnimated.SetActive(false);
         bearBarrier.SetActive(true);
+        fish.SetActive(true);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -21,6 +23,7 @@ public class Bear_unlock : MonoBehaviour
             Destroy(bearGone);
             bearAnimated.SetActive(true);
             bearBarrier.SetActive(false);
+            fish.SetActive(false);
         }
     }
 

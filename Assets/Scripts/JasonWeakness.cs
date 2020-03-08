@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JasonWeakness : MonoBehaviour
+public class GemmaWeakness : MonoBehaviour
 {
 
     public GameObject bubble;
@@ -14,7 +14,7 @@ public class JasonWeakness : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag == "Jason")
+        if (collision.gameObject.tag == "Gemma")
         {
             bubble.SetActive(true);
         }
